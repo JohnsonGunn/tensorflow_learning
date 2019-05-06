@@ -22,3 +22,4 @@ with tf.Session() as sess:
     top5 = np.argsort(probability[0])[-1:-6:-1]
     print('Top-5:', top5)
 
+

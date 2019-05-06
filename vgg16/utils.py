@@ -12,6 +12,7 @@ mpl.rcParams['font.sans-serif'] = ['Arial Unicode MS']
 #正常显示正负号
 mpl.rcParams['axes.unicode_minus'] = False
 
+#对要处理的图像做一些预处理操作
 def load_image(path):
     fig = plt.figure('Center and Resize')
     img = io.imread(path)
@@ -20,7 +21,6 @@ def load_image(path):
     ax0 = fig.add_subplot(131)
     ax0.set_xlabel(u'Original Picture')
     ax0.imshow(img)
-
 
     short_edge = min(img.shape[0:2])
     y = (img.shape[0] - short_edge)/2
